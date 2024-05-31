@@ -1,0 +1,315 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Layout */
+header {
+    background: linear-gradient(135deg, #b13905, #152d58, #e908cb);
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg, #063202, #152d58, #a7046e);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Shapes */
+.section::before,
+.section::after,
+.section .floating-triangle,
+.section .floating-square,
+.section .floating-dot {
+    content: '';
+    position: absolute;
+    background: #fff;
+    opacity: 0.2;
+    animation: floatingShapes 5s infinite ease-in-out;
+}
+
+/* Circle Shapes */
+.section::before,
+.section::after {
+    border-radius: 50%;
+}
+
+.section::before {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 20%;
+}
+
+.section::after {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    right: 13%;
+}
+
+/* Triangle Shape */
+.section .floating-triangle {
+    width: 50px;
+    height: 80px;
+    top: 16%;
+    left: 10%;
+    border-width: 0cqb;
+    transform: rotate(45deg);
+    animation-duration: 6s;
+    animation: floating-triangle 6s infinite ease-in-out;
+}.section::before {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 20%;
+}
+
+.section::after {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    right: 13%;
+}
+
+/* Square Shape */
+.section .floating-square {
+    width: 80px;
+    height: 80px;
+    top: 150%;
+    right: 15%;
+    border-width: 0dvb;
+    transform: rotate3d(1, 1, 1, 45deg);
+    animation-duration: 7s;
+    animation: floating-square 6s infinite ease-in-out;
+}.section::before {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 20%;
+}
+
+.section::after {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    right: 13%;
+}
+
+/* Dot Shape */
+.section .floating-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    bottom: 50%;
+    border-style: dotted;
+    left: 10%;
+    animation-duration: 8s;
+    animation: floating-dot 6s infinite ease-in-out;
+}.section::before {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 20%;
+}
+
+.section::after {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    right: 13%;
+}
+
+@keyframes floatingShapes {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Unique Section Colors and Fonts */
+.section-home {
+    background: linear-gradient(135deg, #08755694, #4a0441, #840606);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.section-about {
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.section-services {
+    background: linear-gradient(135deg, #000428, #078789, #060287);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.section-contact {
+    background: linear-gradient(135deg, #134e5e, #71b280, #c2e709);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Images */
+.section img {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.section img:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Buttons and Forms */
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #55555593;
+    transform: scale(1.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #555;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #222;
+    color: #ccc;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .section img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .section {
+        padding: 1rem;
+    }
+
+    .section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button {
+        width: 100%;
+    }
+}
